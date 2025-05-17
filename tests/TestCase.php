@@ -3,8 +3,8 @@
 namespace Imranwpsi\CategoryManager\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Orchestra\Testbench\TestCase as Orchestra;
 use Imranwpsi\CategoryManager\CategoryManagerServiceProvider;
+use Orchestra\Testbench\TestCase as Orchestra;
 
 class TestCase extends Orchestra
 {
@@ -24,14 +24,31 @@ class TestCase extends Orchestra
         ];
     }
 
-    public function getEnvironmentSetUp($app)
+    protected function getEnvironmentSetUp($app)
     {
         config()->set('database.default', 'testing');
 
-        /*
-         foreach (\Illuminate\Support\Facades\File::allFiles(__DIR__ . '/database/migrations') as $migration) {
-            (include $migration->getRealPath())->up();
-         }
-         */
+        // Register test models namespace
+        $app['config']->set('app.providers', array_merge(
+            $app['config']->get('app.providers'),
+            [CategoryManagerServiceProvider::class]
+        ));
+
+        // Load migrations
+        include_once __DIR__.'/../database/migrations/create_categories_table.php.stub';
+        (new \CreateCategoriesTable())->up();
+
+        // Create tables for test models
+        \Schema::create('posts', function ($table) {
+            $table->increments('id');
+            $table->string('title');
+            $table->timestamps();
+        });
+
+        \Schema::create('products', function ($table) {
+            $table->increments('id');
+            $table->string('name');
+            $table->timestamps();
+        });
     }
 }

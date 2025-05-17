@@ -2,9 +2,9 @@
 
 namespace Imranwpsi\CategoryManager;
 
+use Imranwpsi\CategoryManager\Commands\CategoryManagerCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Imranwpsi\CategoryManager\Commands\CategoryManagerCommand;
 
 class CategoryManagerServiceProvider extends PackageServiceProvider
 {
