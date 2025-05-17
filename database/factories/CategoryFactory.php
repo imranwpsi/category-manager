@@ -2,8 +2,8 @@
 
 namespace Imranwpsi\CategoryManager\Database\Factories;
 
-use Imranwpsi\CategoryManager\Models\Category;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Imranwpsi\CategoryManager\Models\Category;
 
 class CategoryFactory extends Factory
 {

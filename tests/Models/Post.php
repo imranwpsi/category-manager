@@ -10,5 +10,6 @@ class Post extends Model
     use HasCategories;
 
     protected $guarded = [];
+
     protected $table = 'posts';
 }

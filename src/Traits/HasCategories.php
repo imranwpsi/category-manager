@@ -13,7 +13,7 @@ trait HasCategories
 
     public function scopeWithCategories($query, array $categories)
     {
-        return $query->whereHas('categories', function($q) use ($categories) {
+        return $query->whereHas('categories', function ($q) use ($categories) {
             $q->whereIn('id', $categories);
         });
     }

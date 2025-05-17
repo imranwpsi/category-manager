@@ -10,5 +10,6 @@ class Product extends Model
     use HasCategories;
 
     protected $guarded = [];
+
     protected $table = 'products';
 }

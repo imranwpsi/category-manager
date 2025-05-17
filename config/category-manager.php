@@ -2,7 +2,7 @@
 
 return [
     'default_category_type' => 'default',
-    
+
     'types' => [
         'blog' => [
             'name' => 'Blog',
@@ -20,6 +20,6 @@ return [
             'has_image' => true,
         ],
     ],
-    
+
     'max_depth' => 5,
 ];
