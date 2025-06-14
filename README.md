@@ -20,7 +20,7 @@ We highly appreciate you sending us a postcard from your hometown, mentioning wh
 You can install the package via composer:
 
 ```bash
-composer require imranwpsi/category-manager
+composer require ihossain/category-manager
 ```
 
 You can publish and run the migrations with:
@@ -52,8 +52,8 @@ php artisan vendor:publish --tag="category-manager-views"
 ## Usage
 
 ```php
-$categoryManager = new Imranwpsi\CategoryManager();
-echo $categoryManager->echoPhrase('Hello, Imranwpsi!');
+$categoryManager = new Ihossain\CategoryManager();
+echo $categoryManager->echoPhrase('Hello, Ihossain!');
 ```
 
 ## Testing

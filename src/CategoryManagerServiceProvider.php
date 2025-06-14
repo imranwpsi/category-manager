@@ -1,8 +1,8 @@
 <?php
 
-namespace Imranwpsi\CategoryManager;
+namespace Ihossain\CategoryManager;
 
-use Imranwpsi\CategoryManager\Commands\CategoryManagerCommand;
+use Ihossain\CategoryManager\Commands\CategoryManagerCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 

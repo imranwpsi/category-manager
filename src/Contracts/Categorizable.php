@@ -1,6 +1,6 @@
 <?php
 
-namespace Imranwpsi\CategoryManager\Contracts;
+namespace Ihossain\CategoryManager\Contracts;
 
 interface Categorizable
 {

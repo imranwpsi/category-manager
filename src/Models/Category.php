@@ -1,7 +1,8 @@
 <?php
 
-namespace Imranwpsi\CategoryManager\Models;
+namespace Ihossain\CategoryManager\Models;
 
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -37,12 +38,12 @@ class Category extends Model
         return $this->hasMany(Category::class, 'parent_id')->orderBy('order');
     }
 
-    public function scopeActive($query)
+    public function scopeActive($query): Builder
     {
         return $query->where('is_active', true);
     }
 
-    public function scopeOfType($query, $type)
+    public function scopeOfType($query, $type): Builder
     {
         return $query->where('type', $type);
     }

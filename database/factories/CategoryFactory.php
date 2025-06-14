@@ -1,8 +1,8 @@
 <?php
 
-namespace Imranwpsi\CategoryManager\Database\Factories;
+namespace Ihossain\CategoryManager\Database\Factories;
 
-use Imranwpsi\CategoryManager\Models\Category;
+use Ihossain\CategoryManager\Models\Category;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class CategoryFactory extends Factory

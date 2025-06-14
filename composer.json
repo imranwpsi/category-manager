@@ -1,8 +1,8 @@
 {
-    "name": "imranwpsi/category-manager",
+    "name": "ihossain/category-manager",
     "description": "This is my package category-manager",
     "keywords": [
-        "imranwpsi",
+        "ihossain",
         "laravel",
         "category-manager"
     ],
@@ -35,13 +35,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Imranwpsi\\CategoryManager\\": "src/",
-            "Imranwpsi\\CategoryManager\\Database\\Factories\\": "database/factories/"
+            "Ihossain\\CategoryManager\\": "src/",
+            "Ihossain\\CategoryManager\\Database\\Factories\\": "database/factories/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Imranwpsi\\CategoryManager\\Tests\\": "tests/",
+            "Ihossain\\CategoryManager\\Tests\\": "tests/",
             "Workbench\\App\\": "workbench/app/"
         }
     },
@@ -63,10 +63,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Imranwpsi\\CategoryManager\\CategoryManagerServiceProvider"
+                "Ihossain\\CategoryManager\\CategoryManagerServiceProvider"
             ],
             "aliases": {
-                "CategoryManager": "Imranwpsi\\CategoryManager\\Facades\\CategoryManager"
+                "CategoryManager": "Ihossain\\CategoryManager\\Facades\\CategoryManager"
             }
         }
     },

@@ -1,6 +1,6 @@
 <?php
 
-namespace Imranwpsi\CategoryManager\Commands;
+namespace Ihossain\CategoryManager\Commands;
 
 use Illuminate\Console\Command;
 

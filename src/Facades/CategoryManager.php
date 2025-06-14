@@ -1,16 +1,16 @@
 <?php
 
-namespace Imranwpsi\CategoryManager\Facades;
+namespace Ihossain\CategoryManager\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \Imranwpsi\CategoryManager\CategoryManager
+ * @see \Ihossain\CategoryManager\CategoryManager
  */
 class CategoryManager extends Facade
 {
     protected static function getFacadeAccessor(): string
     {
-        return \Imranwpsi\CategoryManager\CategoryManager::class;
+        return \Ihossain\CategoryManager\CategoryManager::class;
     }
 }

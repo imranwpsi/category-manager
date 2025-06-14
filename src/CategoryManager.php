@@ -1,5 +1,5 @@
 <?php
 
-namespace Imranwpsi\CategoryManager;
+namespace Ihossain\CategoryManager;
 
 class CategoryManager {}

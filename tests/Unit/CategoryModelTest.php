@@ -1,6 +1,6 @@
 <?php
 
-use Imranwpsi\CategoryManager\Models\Category;
+use Ihossain\CategoryManager\Models\Category;
 
 it('can create a category', function () {
     $category = Category::create([
@@ -8,7 +8,7 @@ it('can create a category', function () {
         'slug' => 'test-category',
         'is_active' => true
     ]);
-    
+
     expect($category->name)->toBe('Test Category');
     expect($category->slug)->toBe('test-category');
     expect($category->is_active)->toBeTrue();

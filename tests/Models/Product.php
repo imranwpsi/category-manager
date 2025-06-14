@@ -1,9 +1,9 @@
 <?php
 
-namespace Imranwpsi\CategoryManager\Tests\Models;
+namespace Ihossain\CategoryManager\Tests\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Imranwpsi\CategoryManager\Traits\HasCategories;
+use Ihossain\CategoryManager\Traits\HasCategories;
 
 class Product extends Model
 {

@@ -1,5 +1,5 @@
 <?php
 
-use Imranwpsi\CategoryManager\Tests\TestCase;
+use Ihossain\CategoryManager\Tests\TestCase;
 
 uses(TestCase::class)->in(__DIR__);
