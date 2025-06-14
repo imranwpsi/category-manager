@@ -2,10 +2,10 @@
 
 namespace Ihossain\CategoryManager\Traits;
 
+use Ihossain\CategoryManager\Models\Category;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Relations\MorphToMany;
 use Illuminate\Support\Collection;
-use Ihossain\CategoryManager\Models\Category;
 
 trait HasCategories
 {
@@ -16,7 +16,7 @@ trait HasCategories
 
     public function scopeWithCategories($query, array $categories): Builder
     {
-        return $query->whereHas('categories', function($q) use ($categories) {
+        return $query->whereHas('categories', function ($q) use ($categories) {
             $q->whereIn('id', $categories);
         });
     }

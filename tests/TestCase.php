@@ -2,8 +2,8 @@
 
 namespace Ihossain\CategoryManager\Tests;
 
-use Illuminate\Database\Eloquent\Factories\Factory;
 use Ihossain\CategoryManager\CategoryManagerServiceProvider;
+use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
 
 class TestCase extends Orchestra
@@ -36,7 +36,7 @@ class TestCase extends Orchestra
 
         // Load migrations
         include_once __DIR__.'/../database/migrations/create_categories_table.php.stub';
-        (new \CreateCategoriesTable())->up();
+        (new \CreateCategoriesTable)->up();
 
         // Create tables for test models
         \Schema::create('posts', function ($table) {

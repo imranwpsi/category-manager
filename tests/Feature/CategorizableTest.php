@@ -1,8 +1,8 @@
 <?php
 
+use Ihossain\CategoryManager\Models\Category;
 use Ihossain\CategoryManager\Tests\Models\Post;
 use Ihossain\CategoryManager\Tests\Models\Product;
-use Ihossain\CategoryManager\Models\Category;
 
 it('can categorize different models', function () {
     $post = Post::create(['title' => 'Post']);

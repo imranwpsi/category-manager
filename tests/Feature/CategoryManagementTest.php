@@ -17,7 +17,7 @@ it('can manage category hierarchy', function () {
 it('maintains unique slugs', function () {
     Category::create(['name' => 'Test', 'slug' => 'test']);
 
-    expect(fn() => Category::create(['name' => 'Test', 'slug' => 'test']))
+    expect(fn () => Category::create(['name' => 'Test', 'slug' => 'test']))
         ->toThrow(\Illuminate\Database\QueryException::class);
 });
 

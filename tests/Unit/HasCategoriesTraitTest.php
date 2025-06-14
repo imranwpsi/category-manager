@@ -1,7 +1,7 @@
 <?php
 
-use Ihossain\CategoryManager\Tests\Models\Post;
 use Ihossain\CategoryManager\Models\Category;
+use Ihossain\CategoryManager\Tests\Models\Post;
 
 beforeEach(function () {
     $this->post = Post::create(['title' => 'Test Post']);
