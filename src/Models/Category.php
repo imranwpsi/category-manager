@@ -8,6 +8,18 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
+/**
+ * @property int $id
+ * @property string $name
+ * @property string $slug
+ * @property string|null $description
+ * @property bool $is_active
+ * @property string $image
+ * @property int|null $parent_id
+ * @property int $order
+ * @property string|null $type
+ * @property array|null $meta
+ */
 class Category extends Model
 {
     use HasFactory;
@@ -17,6 +29,7 @@ class Category extends Model
         'slug',
         'description',
         'is_active',
+        'image',
         'parent_id',
         'order',
         'type',

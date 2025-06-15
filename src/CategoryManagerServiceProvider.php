@@ -19,7 +19,7 @@ class CategoryManagerServiceProvider extends PackageServiceProvider
             ->name('category-manager')
             ->hasConfigFile()
             ->hasViews()
-            ->hasMigration('create_category_manager_table')
+            ->hasMigration('create_categories_table')
             ->hasCommand(CategoryManagerCommand::class);
     }
 }

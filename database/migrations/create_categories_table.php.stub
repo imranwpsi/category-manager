@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Schema;
 
 class CreateCategoriesTable extends Migration
 {
-    public function up()
+    public function up(): void
     {
         Schema::create('categories', function (Blueprint $table) {
             $table->id();
@@ -14,6 +14,7 @@ class CreateCategoriesTable extends Migration
             $table->string('slug')->unique();
             $table->text('description')->nullable();
             $table->boolean('is_active')->default(true);
+            $table->string('image')->nullable();
             $table->foreignId('parent_id')
                   ->nullable()
                   ->constrained('categories')
@@ -34,14 +35,17 @@ class CreateCategoriesTable extends Migration
                   ->cascadeOnUpdate()
                   ->cascadeOnDelete();
             $table->morphs('categorizable');
-            $table->unique(['category_id', 'categorizable_id', 'categorizable_type']);
+            $table->unique(
+                ['category_id', 'categorizable_id', 'categorizable_type'],
+                'cat_categorizable_unique'
+            );
             
             // Add index for better query performance
             $table->index(['categorizable_id', 'categorizable_type']);
         });
     }
 
-    public function down()
+    public function down(): void
     {
         Schema::dropIfExists('categorizables');
         Schema::dropIfExists('categories');
